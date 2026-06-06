@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/dev/avyos/Astra">
+    <file compressed="true">styles/astra.css</file>
+    <file compressed="true">assets/new-tab.html</file>
+  </gresource>
+</gresources>

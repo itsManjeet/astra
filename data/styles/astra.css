@@ -1,0 +1,513 @@
+@define-color astra_bg #f8f3ec;
+@define-color astra_surface #fffdf8;
+@define-color astra_surface_2 #efe6da;
+@define-color astra_text #201a14;
+@define-color astra_muted #75695f;
+@define-color astra_accent #d96f2c;
+@define-color astra_accent_dark #b9571f;
+
+window.astra-window {
+  background: @astra_bg;
+  color: @astra_text;
+}
+
+.astra-header {
+  background: alpha(@astra_surface, 0.92);
+  border-bottom: 1px solid alpha(#000, 0.10);
+  padding: 8px;
+}
+
+.astra-url-entry {
+  border-radius: 999px;
+  padding: 7px 14px;
+  background: #ffffff;
+  border: 1px solid alpha(#000, 0.14);
+  box-shadow: 0 1px 2px alpha(#000, 0.04);
+}
+
+.astra-flat-button {
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: @astra_text;
+}
+
+.astra-flat-button:hover {
+  background: alpha(#000, 0.07);
+  border: none;
+  box-shadow: none;
+}
+
+.astra-flat-button:disabled {
+  color: alpha(@astra_text, 0.35);
+  background: transparent;
+}
+
+.astra-icon-button {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  -gtk-outline-radius: 999px;
+}
+
+.astra-icon-button label {
+  padding: 0;
+}
+
+.astra-icon-button:hover {
+  background: alpha(#000, 0.07);
+}
+
+.astra-icon-button:active,
+.astra-icon-button:checked {
+  background: alpha(#000, 0.11);
+}
+
+.astra-accent-button {
+  border-radius: 10px;
+  color: #ffffff;
+  background: linear-gradient(to bottom, @astra_accent, @astra_accent_dark);
+  border: 1px solid @astra_accent_dark;
+}
+
+.astra-sidebar {
+  background: alpha(@astra_surface, 0.82);
+  border-right: 1px solid alpha(#000, 0.10);
+}
+
+.astra-sidebar-row {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.astra-statusbar {
+  background: alpha(@astra_surface, 0.86);
+  border-top: 1px solid alpha(#000, 0.10);
+  color: @astra_muted;
+  padding: 4px 10px;
+}
+
+.astra-card {
+  border-radius: 14px;
+  background: @astra_surface;
+  border: 1px solid alpha(#000, 0.10);
+  box-shadow: 0 8px 24px alpha(#000, 0.08);
+}
+
+.astra-permission-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.astra-titlebar {
+  background: alpha(@astra_surface_2, 0.96);
+  border-bottom: 1px solid alpha(#000, 0.12);
+  padding: 4px 6px 0 6px;
+}
+
+.astra-titlebar-content {
+  padding: 0 6px;
+}
+
+.astra-tab-scroller {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.astra-tab-scroller scrollbar {
+  min-height: 0;
+  min-width: 0;
+}
+
+.astra-tab-strip {
+  padding: 0;
+}
+
+.astra-tab {
+  margin: 0 1px;
+  border-radius: 10px 10px 0 0;
+  background: alpha(@astra_surface_2, 0.58);
+  border: none;
+  box-shadow: none;
+}
+
+.astra-tab-active {
+  background: @astra_surface;
+  border: none;
+  box-shadow: none;
+}
+
+.astra-tab-button {
+  border-radius: 10px 0 0 0;
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
+  color: @astra_text;
+}
+
+.astra-tab-button:checked,
+.astra-tab-button:hover {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.astra-tab-label {
+  color: @astra_text;
+  padding: 0;
+}
+
+.astra-tab-close {
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  margin: 3px 6px 3px 0;
+  color: @astra_muted;
+}
+
+.astra-tab-close:hover {
+  background: alpha(#000, 0.08);
+  color: @astra_text;
+}
+
+.astra-new-tab-button {
+  border-radius: 999px;
+  min-width: 34px;
+  min-height: 34px;
+  margin: 0 8px 0 4px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: @astra_text;
+}
+
+.astra-new-tab-button:hover {
+  background: alpha(#000, 0.07);
+  border: none;
+  box-shadow: none;
+}
+
+
+.astra-tab-button,
+.astra-tab-close,
+.astra-new-tab-button,
+.astra-flat-button {
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
+.astra-tab-button:hover,
+.astra-tab-button:checked,
+.astra-tab-button:checked:hover,
+.astra-tab-close:hover,
+.astra-new-tab-button:hover,
+.astra-flat-button:hover {
+  border: none;
+  box-shadow: none;
+}
+
+window.astra-window.astra-dark {
+  background: #11100e;
+  color: #f4efe7;
+}
+
+.astra-dark .astra-titlebar {
+  background: alpha(#24201b, 0.96);
+  border-bottom-color: alpha(#fff, 0.12);
+}
+
+.astra-dark .astra-header,
+.astra-dark .astra-statusbar,
+.astra-dark .astra-sidebar {
+  background: alpha(#1a1815, 0.94);
+  border-color: alpha(#fff, 0.12);
+  color: #f4efe7;
+}
+
+.astra-dark .astra-url-entry {
+  background: #24201b;
+  border-color: alpha(#fff, 0.14);
+  color: #f4efe7;
+}
+
+.astra-dark .astra-tab {
+  background: alpha(#24201b, 0.72);
+}
+
+.astra-dark .astra-tab-active {
+  background: #1a1815;
+}
+
+.astra-dark .astra-flat-button,
+.astra-dark .astra-icon-button,
+.astra-dark .astra-tab-button,
+.astra-dark .astra-tab-label,
+.astra-dark .astra-new-tab-button {
+  color: #f4efe7;
+}
+
+.astra-dark .astra-flat-button:hover,
+.astra-dark .astra-icon-button:hover,
+.astra-dark .astra-tab-close:hover,
+.astra-dark .astra-new-tab-button:hover {
+  background: alpha(#fff, 0.10);
+}
+
+.astra-dark .astra-tab-close,
+.astra-dark .astra-statusbar {
+  color: #b8aea2;
+}
+
+.astra-muted-label {
+  opacity: 0.72;
+}
+
+
+/* Warm cover used while internal Astra pages paint. This removes the ugly
+ * white/blank flash when opening a fresh New Tab. */
+.astra-warm-placeholder {
+  background: @astra_bg;
+}
+
+.astra-warm-placeholder-label {
+  color: alpha(@astra_muted, 0.45);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.astra-load-progress {
+  min-height: 2px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.astra-load-progress trough {
+  min-height: 2px;
+  border: none;
+  background: transparent;
+}
+.astra-load-progress progress {
+  min-height: 2px;
+  border: none;
+  background: @astra_accent;
+}
+
+.astra-tab-favicon {
+  opacity: 0.9;
+  margin-left: 2px;
+}
+
+.astra-settings-page {
+  background: @astra_bg;
+}
+.astra-settings-page viewport {
+  background: @astra_bg;
+}
+.astra-settings-sidebar,
+.astra-settings-card {
+  background: alpha(@astra_surface, 0.92);
+  border: 1px solid alpha(#000, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px alpha(#000, 0.05);
+}
+.astra-settings-sidebar {
+  padding: 16px;
+}
+.astra-settings-brand {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: @astra_text;
+  margin-bottom: 14px;
+}
+.astra-settings-nav,
+.astra-settings-nav-active {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.astra-settings-nav {
+  color: @astra_muted;
+}
+.astra-settings-nav-active {
+  color: @astra_text;
+  background: @astra_surface_2;
+}
+.astra-settings-title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  color: @astra_text;
+}
+.astra-settings-subtitle {
+  color: @astra_muted;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.astra-settings-card {
+  padding: 22px;
+}
+.astra-settings-card-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: @astra_text;
+}
+.astra-settings-card-subtitle,
+.astra-settings-row-hint {
+  color: @astra_muted;
+}
+.astra-settings-row {
+  padding: 12px 0;
+  border-top: 1px solid alpha(#000, 0.08);
+}
+.astra-settings-row-title {
+  color: @astra_text;
+  font-weight: 750;
+}
+.astra-shortcut-label {
+  color: @astra_text;
+  background: @astra_surface_2;
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-family: monospace;
+}
+
+.astra-dark .astra-settings-page,
+.astra-dark .astra-settings-page viewport {
+  background: #11100e;
+}
+.astra-dark .astra-settings-sidebar,
+.astra-dark .astra-settings-card {
+  background: alpha(#1a1815, 0.94);
+  border-color: alpha(#fff, 0.10);
+}
+.astra-dark .astra-settings-row {
+  border-top-color: alpha(#fff, 0.08);
+}
+.astra-dark .astra-settings-nav-active,
+.astra-dark .astra-shortcut-label {
+  background: #24201b;
+}
+.astra-dark .astra-settings-brand,
+.astra-dark .astra-settings-title,
+.astra-dark .astra-settings-card-title,
+.astra-dark .astra-settings-row-title,
+.astra-dark .astra-shortcut-label {
+  color: #f4efe7;
+}
+.astra-dark .astra-settings-subtitle,
+.astra-dark .astra-settings-card-subtitle,
+.astra-dark .astra-settings-row-hint,
+.astra-dark .astra-settings-nav {
+  color: #b8aea2;
+}
+
+/* Polished native preferences dialog */
+.astra-settings-page {
+  background: @astra_bg;
+}
+.astra-settings-sidebar {
+  background: alpha(@astra_surface, 0.96);
+  border-right: 1px solid alpha(#000, 0.10);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 24px 14px;
+}
+.astra-settings-brand {
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  color: @astra_text;
+}
+.astra-settings-brand-subtitle {
+  color: @astra_muted;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.astra-settings-nav-list {
+  background: transparent;
+}
+.astra-settings-nav-list row {
+  border-radius: 14px;
+  margin: 2px 0;
+}
+.astra-settings-nav-list row:hover {
+  background: alpha(@astra_surface_2, 0.75);
+}
+.astra-settings-nav-list row:selected {
+  background: @astra_surface_2;
+}
+.astra-settings-nav-icon {
+  min-width: 28px;
+  font-weight: 800;
+  color: @astra_muted;
+}
+.astra-settings-nav-label {
+  font-weight: 760;
+  color: @astra_text;
+}
+.astra-settings-stack,
+.astra-settings-content-scroller,
+.astra-settings-content-scroller viewport {
+  background: @astra_bg;
+}
+.astra-settings-content-scroller viewport {
+  border: none;
+}
+.astra-settings-card {
+  background: alpha(@astra_surface, 0.95);
+  border: 1px solid alpha(#000, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 36px alpha(#000, 0.045);
+}
+.astra-settings-card-title {
+  font-size: 20px;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
+.astra-settings-row {
+  padding: 14px 0;
+}
+.astra-settings-row switch {
+  min-width: 48px;
+}
+.astra-dark .astra-settings-sidebar {
+  background: alpha(#1a1815, 0.98);
+  border-right-color: alpha(#fff, 0.10);
+}
+.astra-dark .astra-settings-nav-list row:hover {
+  background: alpha(#24201b, 0.7);
+}
+.astra-dark .astra-settings-nav-list row:selected,
+.astra-dark .astra-settings-card,
+.astra-dark .astra-settings-shortcut-label {
+  background: #24201b;
+}
+.astra-dark .astra-settings-stack,
+.astra-dark .astra-settings-content-scroller,
+.astra-dark .astra-settings-content-scroller viewport {
+  background: #11100e;
+}
+.astra-dark .astra-settings-nav-label,
+.astra-dark .astra-settings-brand {
+  color: #f4efe7;
+}
+.astra-dark .astra-settings-brand-subtitle,
+.astra-dark .astra-settings-nav-icon {
+  color: #b8aea2;
+}
