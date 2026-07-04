@@ -1,0 +1,15 @@
+# Meson/Ninja
+/builddir/
+/build/
+/meson-logs/
+/meson-private/
+
+# Legacy Make build outputs
+/astra
+*.o
+*.d
+
+# Editor/OS noise
+*~
+*.swp
+.DS_Store

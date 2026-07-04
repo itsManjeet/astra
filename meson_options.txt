@@ -1,0 +1,7 @@
+option(
+  'webkitgtk_api',
+  type: 'combo',
+  choices: ['4.1', '4.0'],
+  value: '4.1',
+  description: 'WebKitGTK API version to link against. Use 4.1 on current distributions; use 4.0 for older systems.',
+)

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=@APP_NAME@
+GenericName=Web Browser
+Comment=Browse the web with a small native GTK/WebKit browser
+Exec=astra %u
+Icon=@APP_ID@
+Terminal=false
+StartupNotify=true
+StartupWMClass=@APP_ID@
+Categories=GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;image/webp;x-scheme-handler/http;x-scheme-handler/https;
+Keywords=web;browser;internet;gtk;webkit;

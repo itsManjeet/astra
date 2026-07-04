@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>@APP_ID@</id>
+  <name>@APP_NAME@</name>
+  <summary>A small native GTK/WebKit web browser</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>NOASSERTION</project_license>
+  <description>
+    <p>
+      Astra is a compact GTK 3 browser built on WebKitGTK. It includes tabs,
+      private windows, persistent website data, installable web apps, downloads,
+      history, bookmarks, developer tools, local file browsing, and adaptive
+      browser chrome.
+    </p>
+  </description>
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <provides>
+    <binary>astra</binary>
+  </provides>
+  <categories>
+    <category>Network</category>
+    <category>WebBrowser</category>
+  </categories>
+  <url type="homepage">https://example.invalid/astra</url>
+  <releases>
+    <release version="@VERSION@" date="2026-07-07"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>
